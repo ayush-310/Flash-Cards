@@ -1,0 +1,82 @@
+[
+    {
+        "question": "What is JavaScript?",
+        "answer": "JavaScript is a lightweight, interpreted, or just-in-time compiled programming language primarily used for adding interactivity to web pages."
+    },
+    {
+        "question": "What are the data types in JavaScript?",
+        "answer": "Primitive: String, Number, Boolean, Null, Undefined, Symbol, BigInt. Non-primitive: Object, Array, Function."
+    },
+    {
+        "question": "Difference between var, let, and const?",
+        "answer": "var is function-scoped and hoisted; let and const are block-scoped. const cannot be reassigned, while let can."
+    },
+    {
+        "question": "What is hoisting?",
+        "answer": "Hoisting is JavaScript’s default behavior of moving declarations to the top of the current scope before code execution."
+    },
+    {
+        "question": "What is closure in JavaScript?",
+        "answer": "A closure is a function that remembers variables from its lexical scope even when the function is executed outside that scope."
+    },
+    {
+        "question": "What is the difference between == and ===?",
+        "answer": "== checks for equality with type conversion, === checks for equality without type conversion (strict equality)."
+    },
+    {
+        "question": "What is an IIFE (Immediately Invoked Function Expression)?",
+        "answer": "A function that runs as soon as it is defined. Example: (function() { console.log('IIFE'); })();"
+    },
+    {
+        "question": "What is the difference between null and undefined?",
+        "answer": "null is the intentional absence of any value, undefined means a variable has been declared but not yet assigned a value."
+    },
+    {
+        "question": "What is the difference between map() and forEach()?",
+        "answer": "map returns a new array, while forEach is used to iterate over an array and does not return anything."
+    },
+    {
+        "question": "What is event delegation?",
+        "answer": "Event delegation is a technique where a single event listener is added to a parent element to handle events for its children."
+    },
+    {
+        "question": "What is the use of this keyword?",
+        "answer": "this refers to the object that is executing the current function."
+    },
+    {
+        "question": "Explain the difference between call(), apply(), and bind()?",
+        "answer": "call and apply invoke a function with a given this value; call uses comma-separated args, apply uses an array. bind returns a new function with a bound this value."
+    },
+    {
+        "question": "What is a promise in JavaScript?",
+        "answer": "A Promise is an object that represents the eventual completion or failure of an asynchronous operation."
+    },
+    {
+        "question": "How does async/await work?",
+        "answer": "async functions return a Promise. await pauses execution until the Promise is resolved."
+    },
+    {
+        "question": "What is the event loop in JavaScript?",
+        "answer": "The event loop is a mechanism that handles asynchronous operations by placing them in a queue and executing them when the call stack is empty."
+    },
+    {
+        "question": "What are arrow functions?",
+        "answer": "Arrow functions are a shorthand syntax for writing functions and do not bind their own this context."
+    },
+    {
+        "question": "What are template literals?",
+        "answer": "Template literals are string literals allowing embedded expressions, using backticks (`) instead of quotes."
+    },
+    {
+        "question": "What is destructuring?",
+        "answer": "Destructuring is a syntax that allows unpacking values from arrays or properties from objects into variables."
+    },
+    {
+        "question": "What is a spread operator?",
+        "answer": "The spread operator (...) expands elements of an array or object."
+    },
+    {
+        "question": "What are higher-order functions?",
+        "answer": "Higher-order functions are functions that take other functions as arguments or return functions."
+    }
+]
