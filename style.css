@@ -1,196 +1,147 @@
+/* Reset & Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    color: #fff;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Progress Bar */
+.box1 {
+    width: 500px;
+    height: 20px;
+    background-color: #444;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.innerBox {
+    height: 100%;
+    width: 0;
+    background-color: #00ffcc;
+    transition: width 0.3s ease-in-out;
+}
+
+.QP {
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    top: -26px;
+    font-size: 14px;
+}
+
+/* Flip Card */
 .flip-card {
     background-color: transparent;
     width: 500px;
     height: 300px;
-    /* border: 1px solid #f1f1f1; */
     perspective: 1000px;
-    /* Remove this if you don't want the 3D effect */
 }
 
-/* This container is needed to position the front and back side */
 .flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
-    text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-/* .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-} */
 
 .flip-card-inner.flipped {
     transform: rotateY(180deg);
 }
 
-
-/* Position the front and back side */
 .flip-card-front,
 .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
-    /* Safari */
+    padding: 20px;
+    border-radius: 15px;
     backface-visibility: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Style the front side (fallback if image is missing) */
+/* Front Side */
 .flip-card-front {
-    padding: 5px;
+    background: linear-gradient(135deg, #86d631, #f2f2f2);
+    color: #333;
     display: flex;
-    border-radius: 4px;
     flex-direction: column;
-    position: relative;
+    align-items: center;
     justify-content: space-between;
-    /* align-items: center; */
-    background-color: black;
-    margin: 5px;
-    color: white;
+    border-radius: 15px;
 }
 
-/* Style the back side */
+/* Back Side */
 .flip-card-back {
-    background-color: dodgerblue;
-    /* color: white; */
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    /* Elegant blue gradient */
+    color: #fff;
     transform: rotateY(180deg);
-
-    padding: 5px;
-    display: flex;
-    border-radius: 4px;
-    flex-direction: column;
-    position: relative;
-    justify-content: space-between;
-    /* align-items: center; */
-    background-color: black;
-    margin: 5px;
-    color: white;
-}
-
-/* ---------------------------------------------------------------- */
-.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    border-radius: 15px;
 }
 
 
-.box1 {
-    border-radius: 10px;
-    font-size: large;
-    /* border: 1px solid black; */
-    padding: 1px;
-    width: 500px;
-    height: 40px;
-    margin-bottom: 10px;
-}
-
-.innerBox {
-    border-radius: 10px;
-    height: 100%;
-    background-color: green;
-    width: 55%;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+/* Buttons */
 .buttons {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    /* border: 1px solid white; */
-    border-radius: 4px;
-
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-
 button {
-    padding: 5px;
-    margin: 5px;
-    border: none;
-    border-radius: 4px;
-    background-color: #4f46e5;
-    /* Indigo-600 */
+    padding: 10px 18px;;
+    background-color: #001aff;
     color: white;
-    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #4338ca;
-    /* Indigo-700 */
-    transform: translateY(-2px);
+    background-color: #00ccaa;
 }
 
-button:active {
-    background-color: #3730a3;
-    /* Indigo-800 */
-    transform: translateY(0);
+/* Responsive (optional) */
+@media (max-width: 550px) {
+
+    .flip-card,
+    .box1 {
+        width: 90vw;
+    }
 }
 
-button:disabled {
-    background-color: #c7c7c7;
-    color: #666;
-    cursor: not-allowed;
+
+
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card-inner.flipped {
+    transform: rotateY(180deg);
 }
 
-button.prev {
-    background-color: #3b82f6;
-    /* Blue-500 */
-}
-
-button.prev:hover {
-    background-color: #2563eb;
-    /* Blue-600 */
-}
-
-button.next {
-    background-color: #10b981;
-    /* Emerald-500 */
-}
-
-button.next:hover {
-    background-color: #059669;
-    /* Emerald-600 */
-}
-
-button.show-hide {
-    background-color: #f59e0b;
-    /* Amber-500 */
-}
-
-button.show-hide:hover {
-    background-color: #d97706;
-    /* Amber-600 */
-}
-
-.question-number {
-    position: absolute;
-    top: 4px;
-    right: 4px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-}
-
-.question {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 10px;
-}
