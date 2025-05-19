@@ -10,31 +10,42 @@
 
 <body>
     <div class="container">
-        <h1>JS Interview Questions</h1>
-        <div class="box1">
-            <div class="innerBox">
-                <p class="QP"></p>
-            </div>
+        <div>
+            <h1>JavaScript Interview Questions</h1>
         </div>
+
+        <!-- Progress  Bar  -->
+        <div class="bar">
+            <div class="box1">
+                <div class="innerBox"></div>
+            </div>
+            <p class="QP"></p>
+        </div>
+
         <div class="flip-card">
             <div class="flip-card-inner">
+
+                <!-- Question Card  -->
                 <div class="flip-card-front">
-                    <h2 class="Qnum"></h2>
+                    <!-- <h2 class="Qnum"></h2> -->
+                    <h2 class="Qnum">Question <span class="num"></span> </h2>
                     <p class="question"></p>
-                    <div class="buttons">
-                        <button class="prev">Prev</button>
-                        <button class="show-hide"></button>
-                        <button class="next">Next</button>
-                    </div>
                     <p class="question-number"></p>
                 </div>
+
+                <!-- Answer Card  -->
                 <div class="flip-card-back">
+                    <!-- <h2 class="Qnum"></h2> -->
+                    <h2 class="Qnum">Answer <span class="num"></span></h2>
                     <p class="answer"></p>
-                    <div class="buttons">
-                        <button class="show-hide"></button>
-                    </div>
+                    <p class="question-number"></p>
                 </div>
             </div>
+        </div>
+        <div class="buttons">
+            <button class="prev">Prev</button>
+            <button class="show-hide"></button>
+            <button class="next">Next</button>
         </div>
     </div>
 </body>
